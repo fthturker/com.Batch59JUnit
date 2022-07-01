@@ -1,34 +1,18 @@
-import day14_excel.C03_readExcel;
-import org.apache.commons.io.FileUtils;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.junit.Assert;
-import org.junit.Test;
-import org.openqa.selenium.*;
-import utilities.TestBase;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
+import java.time.Duration;
+import java.util.List;
 
-public class C00_Denemeler extends TestBase {
-    @Test
-    public void webElementSS() throws IOException, InterruptedException {
+import static day07_Assertions.C01_Assertions.driver;
 
-            // amazon'a gidelim
-            driver.get("https://www.amazon.com");
+public class C00_Denemeler {
 
-            // asagidaki sign in butonu gorununceye kadar js ile scrool yapalim
-        JavascriptExecutor je= (JavascriptExecutor) driver;
-        WebElement signInButonu= driver.findElement(By.xpath("//span[text()='Sign in'])[2]"));
-        je.executeScript("arguments[0].scrollIntoView(true);",signInButonu);
 
-            // sign in butonuna js ile click yapalim
-        je.executeAsyncScript("arguments[0].click();",signInButonu);
-        Thread.sleep(3000);
-        }
-    }
+}

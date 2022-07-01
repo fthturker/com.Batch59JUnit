@@ -36,13 +36,15 @@ public class C03_RadioButton {
         driver.get("https://www.facebook.com");
 
         //Cookies’i kabul edin
-        driver.findElement(By.xpath("\"//*[@class='_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy']")).click();
+        //driver.findElement(By.xpath("\"//*[@class='_42ft _4jy0 _6lti _4jy6 _4jy2 selected _51sy']")).click();
 
         //“Create an Account” button’una basin
         driver.findElement(By.xpath("//*[text()='Create new account']")).click();
 
         //“radio buttons” elementlerini locate edin
         WebElement femaleButton = driver.findElement(By.xpath("//input[@value='1']"));
+
+
         WebElement maleButton = driver.findElement(By.xpath("//input[@value='2']"));
         WebElement customButton = driver.findElement(By.xpath("//input[@value='-1']"));
 

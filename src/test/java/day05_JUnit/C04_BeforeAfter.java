@@ -31,7 +31,7 @@ public class C04_BeforeAfter {
     }
     @Test
     public void test02(){
-        driver.get("https://www.techproeducation.com");
+        driver.get("https://google.com");
     }
     @Test
     public void test03(){

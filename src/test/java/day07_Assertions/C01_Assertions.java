@@ -20,7 +20,7 @@ public class C01_Assertions {
     2- title'in facebook icermedigini test edin
     3- sol ust kosede amazon logosunun gorundugunu test edin
      */
-    static WebDriver driver;
+    public static WebDriver driver;
 
     @BeforeClass
     public static void setup() {

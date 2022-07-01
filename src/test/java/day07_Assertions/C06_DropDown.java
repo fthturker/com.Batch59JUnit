@@ -15,14 +15,14 @@ import java.util.List;
 
 public class C06_DropDown {
     /*
-    ● Bir class oluşturun: DropDown
-    ● https://the-internet.herokuapp.com/dropdown adresine gidin.
-    1.Index kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
-    2.Value kullanarak Seçenek 2'yi (Option 2) seçin ve yazdırın
-    3.Visible Text(Görünen metin) kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
-    4.Tüm dropdown değerleri(value) yazdırın
-    5. Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True , degilse False yazdırın.
-     */
+       ● Bir class oluşturun: DropDown
+       ● https://the-internet.herokuapp.com/dropdown adresine gidin.
+       1.Index kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
+       2.Value kullanarak Seçenek 2'yi (Option 2) seçin ve yazdırın
+       3.Visible Text(Görünen metin) kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
+       4.Tüm dropdown değerleri(value) yazdırın
+       5. Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True , degilse False yazdırın.
+        */
     WebDriver driver;
     @Before
     public void setUp(){
@@ -41,14 +41,13 @@ public class C06_DropDown {
         driver.get("https://the-internet.herokuapp.com/dropdown");
 
         //1.Index kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
-        WebElement ddm= driver.findElement(By.xpath("//select[@id='dropdown']"));
-        Select select= new Select(ddm);
+        WebElement ddm=driver.findElement(By.xpath("//select[@id='dropdown']"));
+        Select select=new Select(ddm);
         select.selectByIndex(1);
-        System.out.println(select.getFirstSelectedOption());
-
+        System.out.println(select.getFirstSelectedOption().getText());
         //2.Value kullanarak Seçenek 2'yi (Option 2) seçin ve yazdırın
         select.selectByValue("2");
-        System.out.println(select.getFirstSelectedOption());
+        System.out.println(select.getFirstSelectedOption().getText());
 
         //3.Visible Text(Görünen metin) kullanarak Seçenek 1’i (Option 1) seçin ve yazdırın
         select.selectByVisibleText("Option 1");
@@ -57,16 +56,17 @@ public class C06_DropDown {
         //4.Tüm dropdown option'i yazdırın
         List<WebElement> tumOpsiyonlar=select.getOptions();
         for (WebElement each:tumOpsiyonlar
-             ) {
+        ) {
             System.out.println(each.getText());
         }
 
+
         //5. Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True , degilse False yazdırın.
-        int dropdownBoyut=tumOpsiyonlar.size();
-        if (dropdownBoyut==4){
-            System.out.println("true");
+        int dropDownBoyut=tumOpsiyonlar.size();
+        if (dropDownBoyut==4){
+            System.out.println("TRUE");
         }else{
-            System.out.println("false");
+            System.out.println("FALSE");
         }
     }
 }

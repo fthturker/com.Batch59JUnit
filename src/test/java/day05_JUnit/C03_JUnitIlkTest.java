@@ -26,7 +26,7 @@ public class C03_JUnitIlkTest {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get("https://www.techproeducation.com");
+        driver.get("https://www.google.com");
         driver.close();
     }
 

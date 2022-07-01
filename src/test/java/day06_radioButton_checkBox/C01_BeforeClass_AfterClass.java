@@ -32,7 +32,7 @@ public class C01_BeforeClass_AfterClass {
     }
     @Test
     public void test02(){
-        driver.get("https://www.techproeducation.com");
+        driver.get("https://www.google.com");
     }
     @Test
     public void test03(){

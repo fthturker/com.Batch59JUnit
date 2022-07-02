@@ -31,10 +31,13 @@ public class C01_alerts {
         /*herhangi bir web sitesine gidince veya
         bir web sitesinde herhangi bir islem yaptigimizda
         ortaya cikan uyarilara alert diyoruz
+
         eger bir alert inspect yapilabiliyorsa, o alert otomasyon ile kullanilabilir
         bu tur alert'lere HTML alert denir ve bunlar icin ekstra bir islem yapmaya gerek yoktur
         tum webelementler gibi locate edip istedigimiz islemleri yapabiliriz
+
         driver.get("https://www.facebook.com"); da cıkan alert vb.
+
         Ancak web uygulamalarinda HTML alert yaninda java script alert de bulunabilir
         js alert'ler locate edilemez
         Selenium'da JS alert'ler icin cok ozel bir yontem gelistirmistir

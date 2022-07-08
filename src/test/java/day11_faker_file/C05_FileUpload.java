@@ -13,6 +13,7 @@ public class C05_FileUpload extends TestBase {
         //https://the-internet.herokuapp.com/upload adresine gidelim
         driver.get("https://the-internet.herokuapp.com/upload");
         //chooseFile butonuna basalim
+
         //Yuklemek istediginiz dosyayi secelim.
         /*
         bu islemi selnium ile yapma imkanimiz yok cunku web tabanli bir uygulama degil
@@ -20,6 +21,7 @@ public class C05_FileUpload extends TestBase {
         eger chooseFile butonuna var olan bir dosyanin dosya yolunu yollarsaniz
         secme islemi otomatik olarak yapilmis olacaktir.
          */
+
         // 1.adim cjhoose file butonunu locate edelim
         WebElement dosyaSecButonu= driver.findElement(By.id("file-upload"));
         // 2.adim yuklenecek doyanin dosya yolunu olusturalim

@@ -45,8 +45,9 @@ public class C06_KeyboardActions extends TestBase {
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER)
-                .click().perform();
+                .perform();
 
         Thread.sleep(3000);
     }

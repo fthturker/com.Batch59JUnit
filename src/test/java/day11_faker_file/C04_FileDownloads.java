@@ -15,6 +15,7 @@ import java.nio.file.Paths;
             //1. Tests packagenin altina bir class oluşturalim
             //2. https://the-internet.herokuapp.com/download adresine gidelim.
             driver.get("https://the-internet.herokuapp.com/download");
+
             //3. dummy.txt dosyasını indirelim
             WebElement dummyLinki= driver.findElement(By.xpath("//a[text()='dummy.txt']"));
             dummyLinki.click();

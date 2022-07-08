@@ -38,6 +38,7 @@ public class C01_Faker extends TestBase {
                 .sendKeys(Keys.TAB)
                 .sendKeys(faker.internet().password())
                 .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
                 .sendKeys("April")
                 .sendKeys(Keys.TAB)
                 .sendKeys("15")
@@ -45,12 +46,14 @@ public class C01_Faker extends TestBase {
                 .sendKeys("1981")
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
-                .sendKeys(Keys.ARROW_DOWN)
+                .sendKeys(Keys.ARROW_DOWN) // asagi ok
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.TAB)
                 .sendKeys(Keys.ENTER)
-                .click().perform();
+                .perform();
 
         Thread.sleep(15000);
 

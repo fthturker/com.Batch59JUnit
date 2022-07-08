@@ -42,7 +42,7 @@ public class C03_FileExist {
 
         String masaUstuDosyaYolu = farkliKisim + ortakKisim;
 
-        System.out.println(Files.exists(Paths.get(masaUstuDosyaYolu)));
+        //System.out.println(Files.exists(Paths.get(masaUstuDosyaYolu)));
 
         Assert.assertTrue(Files.exists(Paths.get(masaUstuDosyaYolu)));
 

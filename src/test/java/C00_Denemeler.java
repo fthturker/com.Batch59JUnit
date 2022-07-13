@@ -1,8 +1,11 @@
+import com.beust.ah.A;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.TestBase;
 
 import java.nio.file.Files;
@@ -11,25 +14,22 @@ import java.time.Duration;
 import java.util.Set;
 
 public class C00_Denemeler extends TestBase {
+    // 1. Bir class olusturun : EnableTest
+    //2. Bir metod olusturun : isEnabled()
     @Test
-    public void test01() throws InterruptedException {
-        //1. Tests packagenin altina bir class oluşturalim
-        //2. https://the-internet.herokuapp.com/download adresine gidelim.
-        driver.get("https://the-internet.herokuapp.com/download");
+    public void enableTest() {
+        //3. https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
 
-        //3. dummy.txt dosyasını indirelim
-        WebElement dummyLinki=driver.findElement(By.xpath("//a[text()='dummy.txt']"));
-        dummyLinki.click();
-        Thread.sleep(3000);
-        //4. dosyanın başarıyla indirilip indirilmediğini test edelim
-        // dosya downloads'a indirilecektir, bize downloads'un dosya yolu lazim
+        //4. Textbox’in etkin olmadigini(enabled) dogrulayın
 
-        String farkliKisim= System.getProperty("user.home");
-        String ortakKisim = "\\indirilenler\\dummy.txt";
 
-        String arananDosyaYolu= farkliKisim+ortakKisim;
+        //5. Enable butonuna tıklayın ve textbox etkin oluncaya kadar bekleyin
 
-        // geriye o dosya yolundaki dosyanin var oldugunu assert edelim
-        Assert.assertTrue(Files.exists(Paths.get(arananDosyaYolu)));
+
+        //6. “It’s enabled!” mesajinin goruntulendigini dogrulayın.
+
+
+        //7. Textbox’in etkin oldugunu(enabled) dogrulayın.
+
     }
 }
